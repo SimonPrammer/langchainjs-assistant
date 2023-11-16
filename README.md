@@ -11,7 +11,8 @@ It is by no means a finished product and should be extended to fit your needs.
 
 ## Links
 
-- Deployed version: https://svelte-chat-langchain.vercel.app/
+- Official Langchain Assistant Documentation: https://js.langchain.com/docs/modules/agents/agent_types/openai_assistant
+- Official OpenAI Assistant Documentation: https://platform.openai.com/docs/assistants/overview
 
 ## Other Ressources
 

@@ -1,38 +1,51 @@
-# create-svelte
+# LangchainJS Assistant (Template)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a minimal viable example of a Chatbot based on the new Assistant's API of OpenAI utilizing LangchainJS abstractions.
 
-## Creating a project
+The JavaScript framework of choice is SvelteKit, however the code should be easily transferable to other frameworks (most is just simple JavaScript / Node.js code ).
 
-If you're seeing this, you've probably already done this step. Congrats!
+The Template is held purposefully simple in its implementation while still beeing fully functional.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+It is best used as reference to learn the basics of how the new Assistant API works and how to use it with LangchainJS.
+It is by no means a finished product and should be extended to fit your needs.
 
-# create a new project in my-app
-npm create svelte@latest my-app
+## Links
+
+- Deployed version: https://svelte-chat-langchain.vercel.app/
+
+## Other Ressources
+
+- Build a QA Chatbot - Step by step tutorial: https://simon-prammer.vercel.app/blog/post/easiest-qa-chatbot
+- Easy Chatbot - Introduction: https://simon-prammer.vercel.app/blog/post/sveltekit-langchain
+
+## Features
+
+This app features:
+
+- Endpoint to create an Assistant with Knowledge Base from a Document
+- Endpoint to chat with that Assistant (can pass in assistantId to prevent creating over and over again)
+- Minimalistic Chat interface
+
+# Setup
+
+### IMPORTANT - Set environment variables in a .env file (see .env.example for reference).
+
+In the current configuration, you need:
+
+- An OpenAI API Key
+
+### Install dependencies.
+
+```sh
+pnpm i
 ```
 
-## Developing
+### Run the development server at http://localhost:5173/.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```sh
+pnpm run dev
 ```
 
-## Building
+## Important note
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+If you build your own example, note that this repos uses a modified vite.config.ts which is necessary to use the environment variables in local development without explicitly declaring them in the code. This is not necessary in production.

@@ -25,8 +25,9 @@ export const POST = async () => {
 
 		// Add the file to the assistant
 		const assistant = await openai.beta.assistants.create({
-			instructions:
-				'You are a adviser for using the Langchain Assistant API. ALWAYS check your knowledge base before you answer.',
+			instructions: `
+				Assume all questions are related to Langchain Assistants. 
+				ALWAYS check your knowledge base before you answer, if you can not find anything in your given knowledge base, say you don't know`,
 			model: 'gpt-4-1106-preview',
 			tools: [{ type: 'retrieval' }],
 			file_ids: [file.id]

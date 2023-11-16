@@ -27,7 +27,7 @@
 			},
 			//to prevent always creating a new Assistant you can pass in here
 			//example assistantId: 'asst_ZAefYkOvRiDDl06HdMskJdFP'
-			body: JSON.stringify({ messages: $messages, assistantId: 'asst_ZAefYkOvRiDDl06HdMskJdFP' })
+			body: JSON.stringify({ messages: $messages })
 		});
 		const { assistantResponseContentArray } = await request.json();
 
@@ -36,18 +36,30 @@
 			messages.set([
 				...$messages,
 				{
-					role: 'user',
-					content: content.text.value
+					role: 'assistant',
+					content: formatCodeForHTML(content.text.value)
 				}
 			]);
 		});
+	}
+
+	//formatting
+	function formatCodeForHTML(code) {
+		const regex = /```([\s\S]*?)```/g;
+		const formattedCode = code.replace(regex, function (match) {
+			let content = match.slice(3, -3); // Remove the backticks
+			content = content.replace(/ /g, '&nbsp;'); // Replace spaces with non-breaking space
+			content = content.replace(/\n/g, '<br>'); // Replace newlines with HTML line breaks
+			return `<pre><code>${content}</code></pre>`;
+		});
+		return formattedCode;
 	}
 </script>
 
 <div class="messages-container">
 	<ul>
 		{#each $messages as message}
-			<li>{message.role}: {message.content}</li>
+			<li>{message.role}: {@html message.content}</li>
 		{/each}
 	</ul>
 </div>

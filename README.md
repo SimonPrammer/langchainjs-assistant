@@ -7,17 +7,18 @@ The JavaScript framework of choice is SvelteKit, however the code should be easi
 The Template is held purposefully simple in its implementation while still beeing fully functional.
 
 It is best used as reference to learn the basics of how the new Assistant API works and how to use it with LangchainJS.
-It is by no means a finished product and should be extended to fit your needs.
+
+Caution: This is by no means a finished product. This API is still in beta and the integrated RAG from uploaded Files is average at best.
 
 ## Links
 
 - Official Langchain Assistant Documentation: https://js.langchain.com/docs/modules/agents/agent_types/openai_assistant
 - Official OpenAI Assistant Documentation: https://platform.openai.com/docs/assistants/overview
 
-## Other Ressources
+## Other Ressources for building Chatbots
 
-- Build a QA Chatbot - Step by step tutorial: https://simon-prammer.vercel.app/blog/post/easiest-qa-chatbot
-- Easy Chatbot - Introduction: https://simon-prammer.vercel.app/blog/post/sveltekit-langchain
+- Build a QA Chatbot with RAG - Step by step tutorial: https://simon-prammer.vercel.app/blog/post/easiest-qa-chatbot
+- Easy Chatbot - Introduction to the basics: https://simon-prammer.vercel.app/blog/post/sveltekit-langchain
 
 ## Features
 

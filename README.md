@@ -2,6 +2,10 @@
 
 This is a minimal viable example of a Chatbot based on the new Assistant's API of OpenAI utilizing LangchainJS abstractions.
 
+The prompt of the Chatbot is to only answer questions about the content of a given document.
+I uploaded the LangchainJS Documentation for [OpenAI Assistant](https://js.langchain.com/docs/modules/agents/agent_types/openai_assistant) to the Knowledge Base.
+This is far from perfect but it works well to illustrate the concept of using OpenAI's native RAG.
+
 The JavaScript framework of choice is SvelteKit, however the code should be easily transferable to other frameworks (most is just simple JavaScript / Node.js code ).
 
 The Template is held purposefully simple in its implementation while still beeing fully functional.

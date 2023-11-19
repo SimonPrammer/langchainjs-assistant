@@ -29,7 +29,7 @@ export const POST = async () => {
 				Assume all questions are related to Langchain Assistants. 
 				ALWAYS check your knowledge base before you answer, if you can not find anything in your given knowledge base, say you don't know`,
 			model: 'gpt-4-1106-preview',
-			tools: [{ type: 'retrieval' }],
+			tools: [{ type: 'retrieval' }, { type: 'code_interpreter' }],
 			file_ids: [file.id]
 		});
 

@@ -26,8 +26,8 @@
 				'Content-Type': 'application/json'
 			},
 			//to prevent always creating a new Assistant you can pass in here
-			//example assistantId: 'asst_ZAefYkOvRiDDl06HdMskJdFP'
-			body: JSON.stringify({ messages: $messages })
+			//example assistantId: 'asst_e6L0UGSaFn4b17eDIQ1ukeri'
+			body: JSON.stringify({ messages: $messages, assistantId: 'asst_e6L0UGSaFn4b17eDIQ1ukeri' })
 		});
 		const { assistantResponseContentArray } = await request.json();
 
